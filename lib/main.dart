@@ -14,8 +14,30 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(),
       home: Scaffold(
-        body: Text(
-          "Hello World",
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+          elevation: 0.0,
+          leading: Icon(
+            Icons.arrow_back,
+            // color: Colors.red,
+          ),
+          title: Text(
+            "Back to Shopping",
+            // style: TextStyle(
+            //   color: Colors.green,
+            //   fontSize: 14,
+            // ),
+          ),
+          actions: [
+            Icon(
+              Icons.favorite_border_outlined,
+            ),
+          ],
+        ),
+        body: SafeArea(
+          child: Text("Hello World"),
         ),
       ),
     );
