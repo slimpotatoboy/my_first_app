@@ -37,7 +37,17 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: SafeArea(
-          child: Text("Hello World"),
+          child: Column(
+            children: [
+              Image.network(
+                "https://dipenmaharjan.com.np/thumbnail.png",
+                width: MediaQuery.of(context).size.width,
+                height: 100,
+                // compares to object-fit in css
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
         ),
       ),
     );
